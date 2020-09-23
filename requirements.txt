@@ -1,0 +1,5 @@
+Django
+django-environ
+djangorestframework
+django-rest-swagger
+django-cors-headers
