@@ -31,7 +31,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='django-rest-swagger-master',
-    version='1.0.0',
+    version='1.0.5',
     url='https://github.com/crazy-coding/django-rest-swagger-master',
     license='BSD',
     description='Django Template with Template, Restframework and Swagger.',
