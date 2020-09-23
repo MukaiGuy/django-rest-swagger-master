@@ -1,8 +1,6 @@
   
 #!/usr/bin/env python3
 import sys
-from io import open
-
 from setuptools import find_packages, setup
 
 CURRENT_PYTHON = sys.version_info[:2]
@@ -28,14 +26,16 @@ an older version of Django REST Framework:
 """.format(*(REQUIRED_PYTHON + CURRENT_PYTHON)))
     sys.exit(1)
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
-    name='django-master',
-    version='v.1.0',
+    name='django-rest-swagger-master',
+    version='1.0.0',
     url='https://github.com/crazy-coding/django-rest-swagger-master',
     license='BSD',
     description='Django Template with Template, Restframework and Swagger.',
-    long_description=open('README.md', 'r', encoding='utf-8').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
     author='Dennis Cho',
     author_email='dennischo122@gmail.com',  # SEE NOTE BELOW (*)
