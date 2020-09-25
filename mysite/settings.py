@@ -31,16 +31,13 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
+
 MODE = 'TEMPLATE' # 'TEMPLATE' or 'REST'
 
 if MODE == 'TEMPLATE':
-    EXTENDED_INSTALLED_APPS = [
-        'myapp.apps.MyappConfig',
-    ]
+    EXTENDED_INSTALLED_APPS = ['myapp.apps.MyappConfig']
     EXTENDED_MIDDLEWARE = []
-    EXTENDED_CONTEXT_PROCESSORS = [
-        'myapp.context_processors.context_processors',
-    ]
+    EXTENDED_CONTEXT_PROCESSORS = ['myapp.context_processors.context_processors']
     AUTH_USER_MODEL = 'myapp.User'
 
 if MODE == 'REST':
@@ -51,9 +48,7 @@ if MODE == 'REST':
         'corsheaders',
         'api_v1.apps.MyappConfig',
     ]
-    EXTENDED_MIDDLEWARE = [
-        'corsheaders.middleware.CorsMiddleware',
-    ]
+    EXTENDED_MIDDLEWARE = ['corsheaders.middleware.CorsMiddleware']
     EXTENDED_CONTEXT_PROCESSORS = []
     AUTH_USER_MODEL = 'api_v1.User'
     REST_FRAMEWORK = {
@@ -70,9 +65,7 @@ if MODE == 'REST':
         'LOGOUT_URL': 'rest_framework:logout',
         'DOC_EXPANSION': 'list',
     }
-    CORS_ORIGIN_WHITELIST = [
-        "http://localhost:8080",
-    ]
+    CORS_ORIGIN_WHITELIST = ["http://localhost:8080"]
 
 # Application definition
 

@@ -1,5 +1,7 @@
 Django
 django-environ
+
+# only for restframework
 djangorestframework
 django-rest-swagger
 django-cors-headers
