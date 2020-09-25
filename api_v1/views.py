@@ -10,6 +10,9 @@ from django.db import IntegrityError
 from . import serializers, models
 
 
+class IndexView(TemplateView):
+    template_name = 'api_v1/index.html'
+
 class CustomViewSchema(AutoSchema):
     def get_manual_fields(self, path, method):
         extra_fields = []

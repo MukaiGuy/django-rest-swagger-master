@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
-from rest_framework.authtoken.models import Token
 
 
 class CustomModelBase(models.base.ModelBase):
@@ -55,10 +54,6 @@ class User(CustomModel, AbstractBaseUser):
 
     def has_perm_page(self, page):
         return True if (self.group and page in self.group.permission_page) or (self) else False
-
-    @property
-    def token(self):
-        return Token.objects.get(user_id=self)
 
 class Group(CustomModel):
     name = models.CharField(max_length=254)

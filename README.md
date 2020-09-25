@@ -74,8 +74,8 @@ Save your time and please PR if more feature for django template.
 ## Installation
 4. Install [Django Project](https://docs.djangoproject.com/en/3.0/topics/install/)
     - setting secret key 
-    > mv mysite/_secret_settings.py mysite/secret_settings.py
-    > nano mysite/secret_settings.py
+    > mv mysite/.env.example mysite/.env
+    > nano mysite/.env
 
     - install virtual environment
     > virtualenv -p python3 venv
