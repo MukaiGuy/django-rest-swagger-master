@@ -1,4 +1,3 @@
-from django.views.generic.base import TemplateView
 from rest_framework import viewsets, permissions, pagination
 from rest_framework.schemas import AutoSchema
 from rest_framework.response import Response
@@ -9,9 +8,6 @@ from rest_framework.authtoken.models import Token
 from django.db import IntegrityError
 from . import serializers, models
 
-
-class IndexView(TemplateView):
-    template_name = 'api_v1/index.html'
 
 class CustomViewSchema(AutoSchema):
     def get_manual_fields(self, path, method):

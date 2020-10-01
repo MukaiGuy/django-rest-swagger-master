@@ -23,10 +23,11 @@ if settings.MODE == 'TEMPLATE':
     ]
 
 if settings.MODE == 'REST':
-    from api_v1 import views
+    from django.views.generic import TemplateView
+
     EXTENDED_URLPATTERNS = [
         path('api/v1/', include('api_v1.urls')),
-        path('', views.IndexView.as_view()),
+        path('', TemplateView.as_view(template_name="api_v1/index.html")),
     ]
 
 urlpatterns = [
